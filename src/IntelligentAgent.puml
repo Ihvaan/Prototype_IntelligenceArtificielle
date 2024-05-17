@@ -1,0 +1,36 @@
+@startuml
+abstract class IntelligentAgent {
+    + abstract IntelligentAgent clone()
+    + abstract void processRequest()
+}
+
+class MobileAgent extends IntelligentAgent {
+    + MobileAgent clone()
+    + void processRequest()
+}
+
+class InformationAgent extends IntelligentAgent {
+    + InformationAgent clone()
+    + void processRequest()
+}
+
+class InterfaceAgent extends IntelligentAgent {
+    + InterfaceAgent clone()
+    + void processRequest()
+}
+
+class CollaborativeAgent extends IntelligentAgent {
+    + CollaborativeAgent clone()
+    + void processRequest()
+}
+
+class ReferenceBatchAgent {
+    + static ReferenceBatchAgent getInstance()
+    + List<IntelligentAgent> getAgents()
+}
+
+class CustomerBatchAgent {
+    + void addAgent(IntelligentAgent agent)
+    + List<IntelligentAgent> getAgents()
+}
+@enduml
